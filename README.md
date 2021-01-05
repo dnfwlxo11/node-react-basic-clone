@@ -1,2 +1,2 @@
-# node-react-basic-clone
-node + react basic clone coding
+# node-react-boilerplate
+node + react register... etc basic boilerplate
