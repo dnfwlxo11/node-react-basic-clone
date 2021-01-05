@@ -12,6 +12,7 @@ mongoose.connect('mongodb+srv://root:root@node-react-boilerplate.agbac.mongodb.n
   .catch(err => console.log(err))
 
 
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
