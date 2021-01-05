@@ -5,21 +5,25 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "backend": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dnfwlxo11/node-react-basic-clone.git"
+    "url": "git+git@github.com:dnfwlxo11/node-react-boilerplate.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dnfwlxo11/node-react-basic-clone/issues"
+    "url": "git@github.com:dnfwlxo11/node-react-boilerplate.git/issues"
   },
-  "homepage": "https://github.com/dnfwlxo11/node-react-basic-clone#readme",
+  "homepage": "git@github.com:dnfwlxo11/node-react-boilerplate.git#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
