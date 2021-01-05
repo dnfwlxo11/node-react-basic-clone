@@ -60,6 +60,14 @@ userSchema.pre('save', function (next) {
     }
 })
 
+userSchema.method.comaprePassword = function(plainPass, cb) {
+    // 비밀번호 비교, plainPass와 cryptPass
+    bcrypt.compare(plainPass, this.password, function(err, isMatch) {
+        if (err) return cb(err)
+        cb(null, isMatch)
+    })
+}
+
 const User = mongoose.model('User', userSchema)
 
 module.exports = { User }
