@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const saltRounds = 10; // salt의 길이, salt는 암호화할때 사용하는 것
+const jwt = require('jsonwebtoken');
 
 const userSchema = mongoose.Schema({
     name: {
@@ -60,11 +61,23 @@ userSchema.pre('save', function (next) {
     }
 })
 
-userSchema.method.comaprePassword = function(plainPass, cb) {
+userSchema.methods.comparePassword = function(plainPass, cb) {
     // 비밀번호 비교, plainPass와 cryptPass
     bcrypt.compare(plainPass, this.password, function(err, isMatch) {
         if (err) return cb(err)
         cb(null, isMatch)
+    })
+}
+
+userSchema.methods.generateToken = function(cb) {
+    var user = this;
+
+    // jwt을 이용해 token을 생성
+    var token = jwt.sign(user._id.toHexString(), 'secretToken');
+    user.token = token
+    user.save(function(err, user) {
+        if (err) return cb(err)
+        cb(null, user)
     })
 }
 
