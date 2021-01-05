@@ -4,12 +4,13 @@ const port = 3000
 
 const { User } = require('./models/User')
 const bodyParser = require('body-parser')
+const config = require('./config/key')
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://root:root@node-react-boilerplate.agbac.mongodb.net/mgDB?retryWrites=true&w=majority', {
+mongoose.connect(config.mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

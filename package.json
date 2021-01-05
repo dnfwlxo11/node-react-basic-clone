@@ -1,5 +1,5 @@
 {
-  "name": "react-basic-clone",
+  "name": "node-react-boilerplate",
   "version": "1.0.0",
   "description": "node + react basic clone coding",
   "main": "index.js",
@@ -10,14 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:dnfwlxo11/node-react-boilerplate.git"
+    "url": "git+ssh://git@github.com/dnfwlxo11/node-react-boilerplate.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "git@github.com:dnfwlxo11/node-react-boilerplate.git/issues"
-  },
-  "homepage": "git@github.com:dnfwlxo11/node-react-boilerplate.git#readme",
+  "homepage": "http://git@github.com:dnfwlxo11/node-react-boilerplate.git#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
@@ -25,5 +22,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
+  },
+  "bugs": {
+    "url": "https://github.com/dnfwlxo11/node-react-boilerplate/issues"
   }
 }
