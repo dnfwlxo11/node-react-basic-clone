@@ -27,6 +27,7 @@ app.get('/', (req, res) => {
 app.post('/register', (req, res) => {
   // 회원 가입시 필요한 정보들을 클라이언트에서 가져오면, DB에 넣어줌.
   const user = new User(req.body)
+  console.log(req.body)
 
   user.save((err, userInfo) => {
     if (err) return res.json({ success: false, err})
@@ -34,6 +35,10 @@ app.post('/register', (req, res) => {
       success: true
     })
   })
+})
+
+app.post('/login', (req, res) => {
+  
 })
 
 app.listen(port, () => {
