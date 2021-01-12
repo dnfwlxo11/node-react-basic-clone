@@ -45,7 +45,7 @@ app.post('/api/users/register', (req, res) => {
     })
 })
 
-app.post('/login', (req, res) => {
+app.post('/api/users/login', (req, res) => {
     // DB에 로그인 정보가 있는지 검색
     User.findOne({ email: req.body.email }, (err, user) => {
         if (!user) {
